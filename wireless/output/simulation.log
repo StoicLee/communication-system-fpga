@@ -1,0 +1,269 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Nov 25 23:15:42 2026
+# Process ID: 35652
+# Current directory: C:/Users/LiMaoFei/Communication-system/exp4
+# Command line: vivado.exe -mode batch -source wireless/scripts/run_radio_sim.tcl -log wireless/output/simulation.log -journal wireless/output/simulation.jou
+# Log file: C:/Users/LiMaoFei/Communication-system/exp4/wireless/output/simulation.log
+# Journal file: C:/Users/LiMaoFei/Communication-system/exp4\wireless/output/simulation.jou
+# Running On: DESKTOP-0679K1C, OS: Windows, CPU Frequency: 3187 MHz, CPU Physical cores: 12, Host memory: 16891 MB
+#-----------------------------------------------------------
+source wireless/scripts/run_radio_sim.tcl
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# open_project [file join $root build lab4_radio.xpr]
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 502.246 ; gain = 215.340
+# if {[llength [get_filesets -quiet sim_width]] == 0} {create_fileset -simset sim_width}
+# set width_tb [file join $root tb tb_iq_width.sv]
+# if {[llength [get_files -quiet -of_objects [get_filesets sim_width] $width_tb]] == 0} {add_files -fileset sim_width $width_tb}
+# set_property top tb_iq_width [get_filesets sim_width]
+# update_compile_order -fileset sim_width
+update_compile_order: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 502.246 ; gain = 0.000
+# if {[llength [get_filesets -quiet sim_robust]] == 0} {create_fileset -simset sim_robust}
+# set tb [file join $root tb tb_rx_robust.sv]
+# if {[llength [get_files -quiet -of_objects [get_filesets sim_robust] $tb]] == 0} {add_files -fileset sim_robust $tb}
+# set_property top tb_rx_robust [get_filesets sim_robust]
+# update_compile_order -fileset sim_robust
+update_compile_order: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 502.246 ; gain = 0.000
+# foreach spec {{sim_1 wireless_pass.txt} {sim_interface radio_interface_pass.txt} {sim_robust rx_robust_pass.txt} {sim_width iq_width_pass.txt}} {
+#  lassign $spec setname marker
+#  set simdir [file join $root build lab4_radio.sim $setname behav xsim]
+#  file delete -force [file join $simdir $marker]
+#  set_property xsim.simulate.runtime {0 ns} [get_filesets $setname]
+#  launch_simulation -simset $setname
+#  run -all
+#  if {![file exists [file join $simdir $marker]]} {error "$setname self-check failed"}
+#  close_sim -force
+#  if {$setname eq "sim_1"} {file copy -force [file join $simdir wireless_samples.csv] [file join $root output wireless_samples.csv]}
+#  puts "RADIO_TEST_PASS: $setname"
+# }
+Command: launch_simulation  -simset sim_1
+INFO: [Vivado 12-12493] Simulation top is 'tb_iq_link'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_iq_link' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_iq_link_vlog.prj"
+ECHO is off.
+ECHO is off.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 523.211 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_iq_link_behav xil_defaultlib.tb_iq_link xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_iq_link_behav xil_defaultlib.tb_iq_link xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 523.211 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_iq_link_behav -key {Behavioral:sim_1:Functional:tb_iq_link} -tclbatch {tb_iq_link.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_iq_link.tcl
+## current_wave_config
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_iq_link_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0 ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 543.312 ; gain = 41.066
+PASS: 5 channels, 2 resets, varying delay, gain, phase and bounded noise
+Decisions checked 1240 1238 1238 1236 1238, errors=0
+$finish called at time : 1225582800 ps : File "C:/Users/LiMaoFei/Communication-system/exp4/wireless/tb/tb_iq_link.sv" Line 48
+INFO: [Simtcl 6-16] Simulation closed
+RADIO_TEST_PASS: sim_1
+Command: launch_simulation  -simset sim_interface
+INFO: [Vivado 12-12493] Simulation top is 'tb_radio_interface'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_interface/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_interface'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_interface/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_radio_interface' in fileset 'sim_interface'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_interface'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_interface/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_radio_interface_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_interface/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_radio_interface_behav xil_defaultlib.tb_radio_interface xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_radio_interface_behav xil_defaultlib.tb_radio_interface xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 543.312 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_interface/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_radio_interface_behav -key {Behavioral:sim_1:Functional:tb_radio_interface} -tclbatch {tb_radio_interface.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_radio_interface.tcl
+## current_wave_config
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_radio_interface_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0 ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 543.312 ; gain = 0.000
+PASS: AD9361 DDR TX -> channel model -> RX -> demod, PN aligned 256/256, TX DDR edge checks=4179
+$finish called at time : 257876275 ps : File "C:/Users/LiMaoFei/Communication-system/exp4/wireless/tb/tb_radio_interface.sv" Line 66
+INFO: [Simtcl 6-16] Simulation closed
+RADIO_TEST_PASS: sim_interface
+Command: launch_simulation  -simset sim_robust
+INFO: [Vivado 12-12493] Simulation top is 'tb_rx_robust'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_robust/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_robust'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_robust/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_rx_robust' in fileset 'sim_robust'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_robust'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_robust/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_rx_robust_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LiMaoFei/Communication-system/exp4/wireless/tb/tb_rx_robust.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rx_robust
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_robust/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rx_robust_behav xil_defaultlib.tb_rx_robust xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rx_robust_behav xil_defaultlib.tb_rx_robust xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ask_iq_tx
+Compiling module xil_defaultlib.ask_iq_rx
+Compiling module xil_defaultlib.tb_rx_robust
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_rx_robust_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_robust/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_rx_robust_behav -key {Behavioral:sim_1:Functional:tb_rx_robust} -tclbatch {tb_rx_robust.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_rx_robust.tcl
+## current_wave_config
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_rx_robust_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0 ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 543.312 ; gain = 0.000
+PASS: short pulse rejection, 2-sample fade, 8-sample cadence, loss and reacquisition (32 decisions)
+$finish called at time : 7990 ns : File "C:/Users/LiMaoFei/Communication-system/exp4/wireless/tb/tb_rx_robust.sv" Line 48
+INFO: [Simtcl 6-16] Simulation closed
+RADIO_TEST_PASS: sim_robust
+Command: launch_simulation  -simset sim_width
+INFO: [Vivado 12-12493] Simulation top is 'tb_iq_width'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_width/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_width'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_width/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_iq_width' in fileset 'sim_width'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_width'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_width/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_iq_width_vlog.prj"
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/LiMaoFei/Communication-system/exp4/wireless/rtl/ask_iq_rx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ask_iq_rx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/LiMaoFei/Communication-system/exp4/wireless/tb/tb_iq_width.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_iq_width
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_width/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_width/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_iq_width_behav xil_defaultlib.tb_iq_width xil_defaultlib.glbl -log elaborate.log"
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_iq_width_behav xil_defaultlib.tb_iq_width xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ask_iq_rx
+Compiling module xil_defaultlib.tb_iq_width
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_iq_width_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.sim/sim_width/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_iq_width_behav -key {Behavioral:sim_1:Functional:tb_iq_width} -tclbatch {tb_iq_width.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_iq_width.tcl
+## current_wave_config
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_iq_width_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0 ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 543.312 ; gain = 0.000
+PASS: 12-bit signed I/Q extremes and 13-bit envelope, no overflow
+$finish called at time : 200 ns : File "C:/Users/LiMaoFei/Communication-system/exp4/wireless/tb/tb_iq_width.sv" Line 21
+INFO: [Simtcl 6-16] Simulation closed
+RADIO_TEST_PASS: sim_width
+# close_project
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 25 23:17:33 2026...

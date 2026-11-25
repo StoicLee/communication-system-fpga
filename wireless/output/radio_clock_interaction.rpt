@@ -1,0 +1,29 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Wed Nov 25 23:15:10 2026
+| Host         : DESKTOP-0679K1C running 64-bit major release  (build 9200)
+| Command      : report_clock_interaction -file C:/Users/LiMaoFei/Communication-system/exp4/wireless/output/radio_clock_interaction.rpt
+| Design       : lab4_radio_top
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Interaction Report
+
+Clock Interaction Table
+-----------------------
+
+                                                                                                                                                                                        WNS                            TNS Failing  TNS Total    WNS Path         Clock-Pair           Inter-Clock              
+From Clock                                                                                  To Clock                                                                                    Clock Edges  WNS(ns)  TNS(ns)    Endpoints    Endpoints  Requirement(ns)  Classification       Constraints              
+------------------------------------------------------------------------------------------  ------------------------------------------------------------------------------------------  -----------  -------  -------  -----------  -----------  ---------------  -------------------  -----------------------  
+AD9361_DATACLK                                                                              AD9361_DATACLK                                                                              fall - rise    50.04     0.00            0         4040            61.04  Clean                Partial False Path       
+AD9361_DATACLK                                                                              clk2AD9361                                                                                  rise - fall    45.64     0.00            0           13            61.04  Clean                Timed                    
+AD9361_DATACLK                                                                              dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK  rise - rise   120.63     0.00            0          102           122.07  Ignored              Max Delay Datapath Only  
+RX_LAUNCH                                                                                   AD9361_DATACLK                                                                              rise - rise     4.74     0.00            0           12             0.00  Virtual Clock        Timed                    
+clk_out1_clk_radio                                                                          clk_out1_clk_radio                                                                          rise - rise     3.67     0.00            0           10             5.00  Clean                Timed                    
+dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK  AD9361_DATACLK                                                                              rise - rise    31.44     0.00            0           86            33.00  Ignored              Max Delay Datapath Only  
+dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK  rise - rise    27.10     0.00            0         1028            33.00  Clean                Timed                    
+
+
