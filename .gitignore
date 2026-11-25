@@ -1,0 +1,23 @@
+# Vivado temporary and stale project data
+/.Xil/
+/vivado/
+/vivado_final/*
+!/vivado_final/lab4_2ASK_final.xpr
+!/vivado_final/lab4_2ASK_final.srcs/
+!/vivado_final/lab4_2ASK_final.runs/
+/vivado_final/lab4_2ASK_final.runs/.jobs/
+/vivado_final/lab4_2ASK_final.runs/*/.Xil/
+*.jou
+*.backup.*
+# Only the current, reproducible outputs
+/output/*
+!/output/lab4_2ASK.bit
+!/output/lab4_2ASK.ltx
+!/output/lab4_timing.rpt
+!/output/lab4_drc.rpt
+!/output/xsim_samples.csv
+!/output/xsim_carrier_and_envelope.png
+!/output/lpf_frequency_response.png
+!/output/matlab_verification.png
+!/output/filter_designer.mat
+!/output/matlab_verification.mat
