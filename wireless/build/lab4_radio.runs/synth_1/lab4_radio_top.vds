@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Wed Nov 25 23:06:20 2026
-# Process ID: 5452
+# Start of session at: Fri Nov 27 15:42:10 2026
+# Process ID: 27964
 # Current directory: C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.runs/synth_1
 # Command line: vivado.exe -log lab4_radio_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab4_radio_top.tcl
 # Log file: C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.runs/synth_1/lab4_radio_top.vds
@@ -12,7 +12,7 @@
 # Running On: DESKTOP-0679K1C, OS: Windows, CPU Frequency: 3187 MHz, CPU Physical cores: 12, Host memory: 16891 MB
 #-----------------------------------------------------------
 source lab4_radio_top.tcl -notrace
-create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 469.875 ; gain = 183.031
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 469.598 ; gain = 185.055
 Command: read_checkpoint -auto_incremental -incremental C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.srcs/utils_1/imports/synth_1/lab4_radio_top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.srcs/utils_1/imports/synth_1/lab4_radio_top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -25,13 +25,13 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13796
+INFO: [Synth 8-7075] Helper process launched with PID 32728
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1364.996 ; gain = 439.184
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1366.316 ; gain = 439.535
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'lab4_radio_top' [C:/Users/LiMaoFei/Communication-system/exp4/wireless/rtl/lab4_radio_top.v:2]
-INFO: [Synth 8-6157] synthesizing module 'clk_radio' [C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.runs/synth_1/.Xil/Vivado-5452-DESKTOP-0679K1C/realtime/clk_radio_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_radio' (0#1) [C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.runs/synth_1/.Xil/Vivado-5452-DESKTOP-0679K1C/realtime/clk_radio_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_radio' [C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.runs/synth_1/.Xil/Vivado-27964-DESKTOP-0679K1C/realtime/clk_radio_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_radio' (0#1) [C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.runs/synth_1/.Xil/Vivado-27964-DESKTOP-0679K1C/realtime/clk_radio_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'AD9361_1RT_FDD' [C:/Users/LiMaoFei/Communication-system/exp4/wireless/rtl/AD9361_1RT_FDD.v:4]
 INFO: [Synth 8-6157] synthesizing module 'IDELAYE2' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:75740]
 	Parameter CINVCTRL_SEL bound to: FALSE - type: string 
@@ -68,26 +68,26 @@ INFO: [Synth 8-6155] done synthesizing module 'ask_iq_tx' (0#1) [C:/Users/LiMaoF
 INFO: [Synth 8-6157] synthesizing module 'ask_iq_rx' [C:/Users/LiMaoFei/Communication-system/exp4/wireless/rtl/ask_iq_rx.v:7]
 INFO: [Synth 8-6155] done synthesizing module 'ask_iq_rx' (0#1) [C:/Users/LiMaoFei/Communication-system/exp4/wireless/rtl/ask_iq_rx.v:7]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/LiMaoFei/Communication-system/exp4/wireless/rtl/lab4_radio_top.v:32]
-INFO: [Synth 8-6157] synthesizing module 'ila_radio' [C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.runs/synth_1/.Xil/Vivado-5452-DESKTOP-0679K1C/realtime/ila_radio_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ila_radio' (0#1) [C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.runs/synth_1/.Xil/Vivado-5452-DESKTOP-0679K1C/realtime/ila_radio_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ila_radio' [C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.runs/synth_1/.Xil/Vivado-27964-DESKTOP-0679K1C/realtime/ila_radio_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_radio' (0#1) [C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.runs/synth_1/.Xil/Vivado-27964-DESKTOP-0679K1C/realtime/ila_radio_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'lab4_radio_top' (0#1) [C:/Users/LiMaoFei/Communication-system/exp4/wireless/rtl/lab4_radio_top.v:2]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'tx'. This will prevent further optimization [C:/Users/LiMaoFei/Communication-system/exp4/wireless/rtl/lab4_radio_top.v:29]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'capture'. This will prevent further optimization [C:/Users/LiMaoFei/Communication-system/exp4/wireless/rtl/lab4_radio_top.v:32]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'radio'. This will prevent further optimization [C:/Users/LiMaoFei/Communication-system/exp4/wireless/rtl/lab4_radio_top.v:14]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'rx'. This will prevent further optimization [C:/Users/LiMaoFei/Communication-system/exp4/wireless/rtl/lab4_radio_top.v:30]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1478.520 ; gain = 552.707
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1479.102 ; gain = 552.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1478.520 ; gain = 552.707
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1479.102 ; gain = 552.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1478.520 ; gain = 552.707
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1479.102 ; gain = 552.320
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1478.520 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1479.102 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'radio/IBUFG_instA' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -111,23 +111,23 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/lab4_radio_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1558.719 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1568.875 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IBUFG => IBUF: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1558.719 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1568.875 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1568.875 ; gain = 642.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1568.875 ; gain = 642.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -137,10 +137,10 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for PL_CLK_100MHz. (constraint fil
 Applied set_property KEEP_HIERARCHY = SOFT for clocking. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for capture. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1568.875 ; gain = 642.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1568.875 ; gain = 642.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -186,26 +186,26 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1568.875 ; gain = 642.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'PL_CLK_100MHz'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:04 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1568.875 ; gain = 642.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:04 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1568.875 ; gain = 642.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:01:04 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1568.875 ; gain = 642.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -223,37 +223,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:08 ; elapsed = 00:01:16 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1568.875 ; gain = 642.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:08 ; elapsed = 00:01:16 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1568.875 ; gain = 642.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:08 ; elapsed = 00:01:16 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1568.875 ; gain = 642.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:08 ; elapsed = 00:01:16 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1568.875 ; gain = 642.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:08 ; elapsed = 00:01:16 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1568.875 ; gain = 642.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:08 ; elapsed = 00:01:16 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1568.875 ; gain = 642.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -294,19 +294,19 @@ Report Cell Usage:
 |21    |OBUF       |    18|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:08 ; elapsed = 00:01:16 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1568.875 ; gain = 642.094
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:01:10 . Memory (MB): peak = 1558.719 ; gain = 552.707
-Synthesis Optimization Complete : Time (s): cpu = 00:01:08 ; elapsed = 00:01:17 . Memory (MB): peak = 1558.719 ; gain = 632.906
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1568.875 ; gain = 552.320
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1568.875 ; gain = 642.094
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1558.719 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1568.875 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 43 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'radio/IBUFG_instA' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1558.719 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1568.875 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IBUFG => IBUF: 1 instance 
@@ -315,8 +315,8 @@ Synth Design complete | Checksum: 4296b999
 INFO: [Common 17-83] Releasing license: Synthesis
 52 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:20 ; elapsed = 00:01:35 . Memory (MB): peak = 1558.719 ; gain = 1055.551
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1558.719 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:51 . Memory (MB): peak = 1568.875 ; gain = 1065.789
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1568.875 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/LiMaoFei/Communication-system/exp4/wireless/build/lab4_radio.runs/synth_1/lab4_radio_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file lab4_radio_top_utilization_synth.rpt -pb lab4_radio_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 25 23:08:27 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 27 15:43:15 2026...

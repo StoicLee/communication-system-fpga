@@ -42,6 +42,10 @@
 !/wireless/output/simulation.log
 !/wireless/output/wireless_samples.csv
 !/wireless/output/radio_simulation.png
+!/wireless/output/radio_ila_sim.csv
+!/wireless/output/radio_ila_sim_period.csv
+!/wireless/output/radio_ila_sim_period.png
+!/wireless/output/radio_ila_sim_tx_rx_detail.png
 !/wireless/output/radio_utilization_synth.rpt
 !/wireless/output/radio_drc_synth.rpt
 /wireless/tools/*.exe

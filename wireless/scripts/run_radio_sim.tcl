@@ -19,7 +19,9 @@ foreach spec {{sim_1 wireless_pass.txt} {sim_interface radio_interface_pass.txt}
  run -all
  if {![file exists [file join $simdir $marker]]} {error "$setname self-check failed"}
  close_sim -force
- if {$setname eq "sim_1"} {file copy -force [file join $simdir wireless_samples.csv] [file join $root output wireless_samples.csv]}
+ if {$setname eq "sim_1"} {
+  foreach name {wireless_samples.csv radio_ila_sim.csv} {file copy -force [file join $simdir $name] [file join $root output $name]}
+ }
  puts "RADIO_TEST_PASS: $setname"
 }
 close_project

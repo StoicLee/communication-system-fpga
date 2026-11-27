@@ -31,10 +31,13 @@ module tb_iq_link;
     ask_iq_rx r4(clk,resetn,chan_i,chan_q,env[4],bits[4],valid[4],locked[4],sliced[4]);
     integer checked[0:4]; integer last_valid[0:4]; integer errors=0; integer epoch=0; integer cycles=0;
     reg [4:0] expected;
-    integer f;
+    integer f, ila_csv;
     initial begin
       for(integer j=0;j<5;j=j+1) begin checked[j]=0; last_valid[j]=-1; end
       f=$fopen("wireless_samples.csv","w");
+      ila_csv=$fopen("radio_ila_sim.csv","w");
+      if (!f || !ila_csv) $fatal(1,"Cannot open simulation output");
+      $fdisplay(ila_csv,"sample,pn,tx_i,tx_q,rx_i,rx_q,envelope,demod,valid,timing_locked");
       $fdisplay(f,"cycle,pn,tx_i,tx_q,rx_i,rx_q,envelope,sliced,demod,valid");
       repeat(20) @(negedge clk); resetn=1;
       repeat(5000) @(negedge clk);
@@ -43,6 +46,7 @@ module tb_iq_link;
       for(integer j=0;j<5;j=j+1) if(checked[j]<1100) $fatal(1,"insufficient checks %0d: %0d",j,checked[j]);
       if(errors) $fatal(1,"wireless link errors=%0d",errors);
       $fclose(f);
+      $fclose(ila_csv);
       $display("PASS: 5 channels, 2 resets, varying delay, gain, phase and bounded noise");
       $display("Decisions checked %0d %0d %0d %0d %0d, errors=0",checked[0],checked[1],checked[2],checked[3],checked[4]);
       f=$fopen("wireless_pass.txt","w"); $fdisplay(f,"PASS"); $fclose(f); $finish;
@@ -61,6 +65,7 @@ module tb_iq_link;
                 $error("case %0d cycle %0d demod=%0d expected=%0d",j,cycles,bits[j],expected[j]); errors++;
             end
         end
+        if(epoch==0 && cycles<600) $fdisplay(ila_csv,"%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d",cycles,pn,$signed(tx_i),$signed(tx_q),$signed(di[3]>>>1),$signed(dq[3]>>>1),env[1],bits[1],valid[1],locked[1]);
         if(epoch==0 && cycles<600) $fdisplay(f,"%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d",cycles,pn,$signed(tx_i),$signed(tx_q),$signed(di[3]>>>1),$signed(dq[3]>>>1),env[1],sliced[1],bits[1],valid[1]);
         cycles++;
     end
